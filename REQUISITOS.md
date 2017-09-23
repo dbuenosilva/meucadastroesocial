@@ -1,3 +1,7 @@
+## Meu Cadastro eSocial
+
+### Meu Cadastro eSocial é um portal para atualização das informações de trabalhadores para o eSocial. O eSocial é um novo sistema de registro, elaborado pelo Governo Federal, para facilitar a administração de informações relativas aos trabalhadores. De forma padronizada e simplificada, o eSocial vai reduzir custos e tempo da área contábil das empresas na hora de executar 15 obrigações fiscais, previdenciárias e trabalhistas. Todas as informações coletadas pelas empresas vão compor um banco de dados único, administrado pelo Governo Federal, que abrangerá mais de 40 milhões de trabalhadores e contará com a participação de mais de 8 milhões de empresas, além de 80 mil escritórios de contabilidade.   
+
 
 Descrição: implementação de “portal” para Atualização Cadastral dos colaboradores visando a entrega de informações para o projeto e-Social[1]. O portal deverá ser acessado por meio de um navegador (browser). Espera-se que opere adequadamente no Google Chrome (versão mais recente).
 O portal não é uma aplicação completa no sentido em que não inclui serviços de back end que seriam exigidos em cenário real. Ou seja, não faz parte do escopo o desenvolvimento de código para armazenar os identificadores criados, por exemplo.
