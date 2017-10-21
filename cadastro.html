@@ -117,45 +117,208 @@
 												</div>
 												<div class="tab-content">
 														<div class="tab-pane fade" id="step1" parsley-validate parsley-bind>
-																<h3>Dados do trabalhador</h3><br>
+																<h3>Dados pessoais</h3><br>
 																<div class="form-group row">
-                                                                                <div class="col-md-6">
-                                                                                <label class="control-label">Nome completo</label>
-                                                                                <input type="text" class="form-control" id="fullname" parsley-required="true" placeholder="informe seu nome completo">
-                                                                                </div>
-                                                                          </div>
+                                		<div class="col-md-6">
+                                        <label class="control-label">Nome do trabalhador</label>
+                                              <input type="text" maxlength=70 class="form-control" id="nmTrab" parsley-required="true" placeholder="informe seu nome completo">
+                                    </div>
+                                </div>
 
-                                                                <div class="form-group row">
-                                                                    <div class="col-md-6">
-                                                                                <label class="control-label">CPF</label>
-                                                                                <div class="row">
-                                                                                        <div class="col-md-6"><input type="text" class="form-control" parsley-rangelength="[11,11]" parsley-type="digits" parsley-required="true" placeholder="somente números"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                    </div>
+																<div class="form-group">
+																		<label class="control-label">Sexo</label>
+																		<div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="sexo" value="m" parsley-required="true" parsley-error-container="div#radio-error">
+																								Masculino </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="sexo" value="f" >
+																								Feminino </label>
+																				</div>
+																				<div id="radio-error"></div>
+																		</div>
+																</div>
 
-                                                            <div class="form-group">
-                                                                            <label class="control-label">Número de Inscrição do Segurado (NIS) PIS/PASEP/INSS</label>
-                                                                            <div class="row">
-                                                                                    <div class="col-md-6"><input type="text" class="form-control" parsley-type="number" parsley-required="true" placeholder="somente números"></div>
-                                                                            </div>
-                                                                    </div>
+																<div class="form-group">
+																		<label class="control-label">Raça cor</label>
+																		<div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="racaCor" value="1" parsley-required="true" parsley-error-container="div#radio-error">
+																								Amarela de origem japonesa, coreana, etc... </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="racaCor" value="2" >
+																								Branca </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="racaCor" value="3" >
+																								Indígina </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="racaCor" value="4" >
+																								Parda </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="racaCor" value="5" >
+																								Não informada </label>
+																				</div>
+																				<div id="radio-error"></div>
+																		</div>
+																</div>
 
-                                                                    <div class="form-group row">
-                                                                                <div class="col-md-4">
-                                                                                <label class="control-label">Cidade de nascimento</label>
-                                                                                <input class="form-control" parsley-required="true" placeholder="">
-                                                                                </div>
-                                                                                <div class="col-md-2">
-                                                                                <label class="control-label">Nacionalidade</label>
-                                                                                <select  class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary" >
-                                                                                        <option value="Brasil">Brasil</option>
-                                                                                        <option value="Argentina">Argentina</option>
-                                                                                        <option value="Estados Unidos">Estados Unidos</option>
-                                                                                        <option value="Inglaterra">Inglaterra</option>
-                                                                                        <option value="Uruguai">Uruguai</option>
-                                                                                        <option value="Colômbia">Colômbia</option>
-                                                                                </select>
+																<div class="form-group">
+																		<label class="control-label">Estado civil </label>
+																		<div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="estCiv" value="1" parsley-required="true" parsley-error-container="div#radio-error">
+																								Casado </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="estCiv" value="2" >
+																								Divorciado </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="estCiv" value="3" >
+																								Solteiro </label>
+																				</div>
+
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="estCiv" value="4" >
+																								Viúvo </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="estCiv" value="5" >
+																								União estável </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="estCiv" value="6" >
+																								Outros </label>
+																				</div>
+																				<div id="radio-error"></div>
+																		</div>
+																</div>
+
+																<div class="form-group">
+																		<label class="control-label">Grau de instrução do trabalhador</label>
+																		<div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="01" parsley-required="true" parsley-error-container="div#radio-error">
+																								01 – Analfabeto </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="02" >
+																								02 – Até a 4º série incompleta do ensino fundamental (antigo 1º grau ou primário),
+																								ou que tenha se alfabetizado sem ter freqüentado escola regular </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="03" >
+																								03 – 4º série completa do ensino fundamental (antigo 1º grau ou ginásio) </label>
+																				</div>
+
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="04" >
+																								 04 – Da 5º a 8º série do ensino fundamental (antigo 1º grau ou ginásio) </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="05" >
+																								 05 – Ensino fundamental completo (antigo 1º grau, primário ou ginásio) </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="06" >
+																								06 – Ensino médio incompleto (antigo 2º grau, secundário ou colegial) </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="07" >
+																								07 – Ensino médico completo (antigo 2º grau, secundário ou colegial) </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="08" >
+																								08 – Educação Superior incompleta </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="09" >
+																								09 – Educação Superior completa </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="10" >
+																								10 – Pós Graduação </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="11" >
+																								11 – Mestrado </label>
+																				</div>
+																				<div class="radio">
+																						<label>
+																								<input type="radio" name="optionsRadios[]" id="grauInstr" value="12" >
+																								12 – Doutorado </label>
+																				</div>
+																				<div id="radio-error"></div>
+																		</div>
+																</div>
+
+																<div class="form-group row">
+                                		<div class="col-md-6">
+                                        <label class="control-label">Nome Social</label>
+                                              <input type="text" maxlength=70 class="form-control" id="nmTrab" parsley-required="true" placeholder="informe seu nome completo">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        <label class="control-label">CPF</label>
+                                        <div class="row">
+                                            <div class="col-md-6"><input type="text" class="form-control" parsley-rangelength="[11,11]" parsley-type="digits" parsley-required="true" placeholder="somente números"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Número de Inscrição do Segurado (NIS) PIS/PASEP/INSS</label>
+                                    <div class="row">
+                                      	<div class="col-md-6"><input type="text" class="form-control" parsley-type="number" parsley-required="true" placeholder="somente números"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <label class="control-label">Cidade de nascimento</label>
+                                        <input class="form-control" parsley-required="true" placeholder="">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="control-label">Nacionalidade</label>
+                                        <select  class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary" >
+                                        <option value="Brasil">Brasil</option>
+                                      	<option value="Argentina">Argentina</option>
+                                        <option value="Estados Unidos">Estados Unidos</option>
+                                        <option value="Inglaterra">Inglaterra</option>
+                                        <option value="Uruguai">Uruguai</option>
+                                        <option value="Colômbia">Colômbia</option>
+                                        </select>
                                                                                     </span>
                                                                                 </div>
 
