@@ -118,12 +118,287 @@
 						<li><a href="#step2" data-toggle="tab">2</a></li>
 						<li><a href="#step3" data-toggle="tab">3</a></li>
 						<li><a href="#step4" data-toggle="tab">4</a></li>
+						<li><a href="#step1" data-toggle="tab">5</a></li>
+						<li><a href="#step2" data-toggle="tab">6</a></li>
+						<li><a href="#step3" data-toggle="tab">7</a></li>
+						<li><a href="#step4" data-toggle="tab">8</a></li>						
 					</ul>
 					<div class="progress progress-stripes progress-sm" style="margin:0">
 						<div class="progress-bar" data-color="theme"></div>
 					</div>
 					<div class="tab-content">
-						<div class="tab-pane fade" id="step1">
+
+						<!--
+						////////////////////////////////////////////////////////////////////
+						//////////     DADOS PESSOAIS                             //////////
+						////////////////////////////////////////////////////////////////////
+						-->
+
+						<div class="tab-pane fade" id="step1" parsley-validate parsley-bind>
+								<h3>Dados pessoais</h3><br>
+								<div class="form-group row">
+										<div class="col-md-6">
+												<label class="control-label">Nome do trabalhador</label>
+															<input type="text" maxlength=70 class="form-control" id="nmTrab" parsley-required="true" placeholder="informe seu nome completo">
+										</div>
+								</div>
+
+								<div class="form-group">
+										<label class="control-label">Sexo</label>
+										<div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="optionsRadios[]" id="sexo" value="m" parsley-required="true" parsley-error-container="div#radio-error">
+																Masculino </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="optionsRadios[]" id="sexo" value="f" >
+																Feminino </label>
+												</div>
+												<div id="radio-error"></div>
+										</div>
+								</div>
+
+								<div class="form-group">
+										<label class="control-label">Raça cor</label>
+										<div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="racaCor" id="racaCor" value="1" parsley-required="true" parsley-error-container="div#radio-error">
+																Amarela de origem japonesa, coreana, etc... </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="racaCor" id="racaCor" value="2" >
+																Branca </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="racaCor" id="racaCor" value="3" >
+																Indígina </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="racaCor" id="racaCor" value="4" >
+																Parda </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="racaCor" id="racaCor" value="5" >
+																Não informada </label>
+												</div>
+												<div id="radio-error"></div>
+										</div>
+								</div>
+
+								<div class="form-group">
+										<label class="control-label">Estado civil </label>
+										<div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="estCiv" id="estCiv" value="1" parsley-required="true" parsley-error-container="div#radio-error">
+																Casado </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="estCiv" id="estCiv" value="2" >
+																Divorciado </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="estCiv" id="estCiv" value="3" >
+																Solteiro </label>
+												</div>
+
+												<div class="radio">
+														<label>
+																<input type="radio" name="estCiv" id="estCiv" value="4" >
+																Viúvo </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="estCiv" id="estCiv" value="5" >
+																União estável </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="estCiv" id="estCiv" value="6" >
+																Outros </label>
+												</div>
+												<div id="radio-error"></div>
+										</div>
+								</div>
+
+								<div class="form-group">
+										<label class="control-label">Grau de instrução do trabalhador</label>
+										<div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="01" parsley-required="true" parsley-error-container="div#radio-error">
+																01 – Analfabeto </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="02" >
+																02 – Até a 4º série incompleta do ensino fundamental (antigo 1º grau ou primário),
+																ou que tenha se alfabetizado sem ter freqüentado escola regular </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="03" >
+																03 – 4º série completa do ensino fundamental (antigo 1º grau ou ginásio) </label>
+												</div>
+
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="04" >
+																 04 – Da 5º a 8º série do ensino fundamental (antigo 1º grau ou ginásio) </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="05" >
+																 05 – Ensino fundamental completo (antigo 1º grau, primário ou ginásio) </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="06" >
+																06 – Ensino médio incompleto (antigo 2º grau, secundário ou colegial) </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="07" >
+																07 – Ensino médico completo (antigo 2º grau, secundário ou colegial) </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="08" >
+																08 – Educação Superior incompleta </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="09" >
+																09 – Educação Superior completa </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="10" >
+																10 – Pós Graduação </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="11" >
+																11 – Mestrado </label>
+												</div>
+												<div class="radio">
+														<label>
+																<input type="radio" name="grauInstr" id="grauInstr" value="12" >
+																12 – Doutorado </label>
+												</div>
+												<div id="radio-error"></div>
+										</div>
+								</div>
+
+								<div class="form-group row">
+										<div class="col-md-6">
+												<label class="control-label">Nome Social</label>
+															<input type="text" maxlength=70 class="form-control" id="nmSoc" parsley-required="true" placeholder="informe seu nome completo">
+										</div>
+								</div>
+
+								<div class="form-group">
+										<label class="control-label">Data de nascimento</label>
+										<div class="row">
+												<div class="col-md-6"><input type="text" class="form-control" id="dtNascto" parsley-type="dateIso" parsley-required="true" placeholder="DD-MM-AAAA"></div>
+										</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Sigla da UF de Nascimento</label>
+									<div class="row">
+									<div class="col-md-2">
+											<select  id="codMunicNascto" class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary" >
+												<option value="AC">AC</option>
+												<option value="AL">AL</option>
+												<option value="AP">AP</option>
+												<option value="AM">AM</option>
+												<option value="BA">BA</option>
+												<option value="CE">CE</option>
+												<option value="DF">DF</option>
+												<option value="ES">ES</option>
+												<option value="GO">GO</option>
+												<option value="MA">MA</option>
+												<option value="MT">MT</option>
+												<option value="MS">MS</option>
+												<option value="MG">MG</option>
+												<option value="PA">PA</option>
+												<option value="PB">PB</option>
+												<option value="PR">PR</option>
+												<option value="PE">PE</option>
+												<option value="PI">PI</option>
+												<option value="RJ">RJ</option>
+												<option value="RN">RN</option>
+												<option value="RS">RS</option>
+												<option value="RO">RO</option>
+												<option value="RR">RR</option>
+												<option value="SC">SC</option>
+												<option value="SP">SP</option>
+												<option value="SE">SE</option>
+												<option value="TO">TO</option>
+											</select>
+										</span>
+									</div>
+								</div>
+								</div>
+
+								<div class="form-group">
+									<div class="row">
+									<div class="col-md-2">
+										<label class="control-label">País de Nascimento</label>
+										<select  id ="paisNascto" class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary" >
+										<option value="Brasil">Brasil</option>
+										<option value="Argentina">Argentina</option>
+										<option value="Estados Unidos">Estados Unidos</option>
+										<option value="Inglaterra">Inglaterra</option>
+										<option value="Uruguai">Uruguai</option>
+										<option value="Colômbia">Colômbia</option>
+										</select>
+										</span>
+								</div>
+								</div>
+							</div>
+
+								<div class="form-group">JSON teste estados</label>
+										<div class="row">
+											<div class="col-md-2">
+												<select id="locality-dropdown" name="locality">
+												</span>
+										</div>
+										</div>
+								</div>
+
+								<div class="form-group row">
+										<div class="col-md-6">
+												<label class="control-label">Nome do pai </label>
+															<input type="text" maxlength=70 class="form-control" id="nmPai" parsley-required="true" placeholder="informe seu nome completo">
+										</div>
+								</div>
+
+								<div class="form-group row">
+										<div class="col-md-6">
+												<label class="control-label">Nome da mãe</label>
+															<input type="text" maxlength=70 class="form-control" id="nmMae" parsley-required="true" placeholder="informe seu nome completo">
+										</div>
+								</div>
+						</div>
+
+						<!--
+						////////////////////////////////////////////////////////////////////
+						//////////     DOCUMENTOS DE IDENTIFICACAO                //////////
+						////////////////////////////////////////////////////////////////////
+						-->
+
+						<div class="tab-pane fade" id="step2">
 							<h3>Documentos de Identificação</h3><br>
 
 							<div class="form-group row">
@@ -393,13 +668,68 @@
 						</div>
 					</div>
 
+				</div>
 
+				<!--
+				////////////////////////////////////////////////////////////////////
+				//////////     INFORMAÇÕES DE CONTATO                     //////////
+				////////////////////////////////////////////////////////////////////
+				-->
+	  		<div class="tab-pane fade" id="step3">
+					<h3>Informações de Contato</h3><br>
 
 				</div>
+
+				<!--
+				////////////////////////////////////////////////////////////////////
+				//////////     INFORMAÇÕES DE ENDEREÇO NO BRASIL          //////////
+				////////////////////////////////////////////////////////////////////
+				-->
 				<div class="tab-pane fade" id="step4">
-
+					<h3>Informações do Endereço no Brasil</h3><br>
 
 				</div>
+
+				<!--
+				////////////////////////////////////////////////////////////////////
+				//////////     INFORMAÇÕES DE ENDEREÇO NO EXTERIOR        //////////
+				////////////////////////////////////////////////////////////////////
+				-->
+				<div class="tab-pane fade" id="step5">
+					<h3>Informações do Endereço no Exterior</h3><br>
+
+				</div>
+
+				<!--
+				////////////////////////////////////////////////////////////////////
+				//////////     INFORMAÇÕES DO TRABALHADOR ESTRANGEIRO     //////////
+				////////////////////////////////////////////////////////////////////
+				-->
+				<div class="tab-pane fade" id="step6">
+					<h3>Grupo de informações do Trabalhador Estrangeiro</h3><br>
+
+				</div>
+
+				<!--
+				////////////////////////////////////////////////////////////////////
+				//////////     INFORMAÇÕES REFERENTE A DEPENDENTES        //////////
+				////////////////////////////////////////////////////////////////////
+				-->
+				<div class="tab-pane fade" id="step7">
+					<h3>Informações referente a Dependentes</h3><br>
+
+				</div>
+
+				<!--
+				////////////////////////////////////////////////////////////////////
+				//////////     INFORMAÇÕES REFERENTE A DEFICIÊNCIA FÍSICA //////////
+				////////////////////////////////////////////////////////////////////
+				-->
+				<div class="tab-pane fade" id="step8">
+					<h3>Informações referente a Deficiência Física</h3><br>
+
+				</div>
+
 				<hr>
 				<footer class="row">
 					<div class="col-sm-4">
@@ -411,8 +741,8 @@
 					<div class="col-sm-8 align-lg-right"><div class="wizard-status">Etapa <span></span></div></div>
 				</footer>
 			</div>
+				<!-- //tab-content -->
 		</form>
-
 
 	</div>
 	<!-- //content > row > col-lg-12 -->
@@ -423,14 +753,10 @@
 </div>
 <!-- //content-->
 
-
 </div>
 <!-- //main-->
 
-
-
 </div>
-
 
 
 <!--
