@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html">
 	<meta name="distribution" content="global" />
-	<meta name="robots" content="follow, all" />
 	<meta name="language" content="pt-br" />
 	<meta name="description" content="MeuCadastroESocial é um portal para atualização dos dados dos colaborares de uma organização."/>
 	<meta name="keywords" content="MeuCadastroESocial, e-social, eSocial, caixa, sped, dirf, gfip, sefip, inss,
@@ -55,11 +54,11 @@
 
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-						<em><strong>Olá</strong>, Fulano </em> <i class="dropdown-icon fa fa-angle-down"></i>
+						<em><strong>Olá</strong>, [usuário] </em> <i class="dropdown-icon fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu pull-right icon-right arrow">
-						<li><a href="#"><i class="fa fa-user"></i> Meu perfil</a></li>
-						<li><a href="#"><i class="fa fa-money"></i> Dados da empresa</a></li>
+						<li><a href="#"><i class="fa fa-user"></i> Meu Cadastro</a></li>
+						<li><a href="#"><i class="fa fa-money"></i> Dados da Organização</a></li>
 						<li class="divider"></li>
 						<li><a href="#"><i class="fa fa-sign-out"></i> Sair </a></li>
 					</ul>
@@ -82,13 +81,13 @@
 <div class="widget-top-search">
 	<span class="icon"><a href="#" class="close-header-search"><i class="fa fa-times"></i></a></span>
 	<form id="top-search">
-		<h2><strong>Quick</strong> Search</h2>
+		<h2> Pesquisa <strong>Rápida</strong> </h2>
 		<div class="input-group">
-			<input  type="text" name="q" placeholder="Find something..." class="form-control" />
+			<input  type="text" name="q" placeholder="Encontre algo..." class="form-control" />
 			<span class="input-group-btn">
-				<button class="btn" type="button" title="With Sound"><i class="fa fa-microphone"></i></button>
-				<button class="btn" type="button" title="Visual Keyboard"><i class="fa fa-keyboard-o"></i></button>
-				<button class="btn" type="button" title="Advance Search"><i class="fa fa-th"></i></button>
+				<button class="btn" type="button" title="Fale algo"><i class="fa fa-microphone"></i></button>
+				<button class="btn" type="button" title="Teclado Virtual"><i class="fa fa-keyboard-o"></i></button>
+				<button class="btn" type="button" title="Pesquisa Avançada"><i class="fa fa-th"></i></button>
 			</span>
 		</div>
 	</form>
@@ -103,9 +102,8 @@
 -->
 <div id="main">
 	<ol class="breadcrumb">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">Form</a></li>
-		<li class="active">Form Wizard</li>
+		<li><a href="#">Início</a></li>
+		<li class="active">Meu Cadastro</li>
 	</ol>
 	<!-- //breadcrumb-->
 
@@ -217,6 +215,13 @@
 							<div class="col-md-2">
 								<label class="control-label">CNH</label>
 								<input type="text" id="nrRegCnh" class="form-control" parsley-type="number" parsley-required="true" placeholder="">
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<div class="col-md-2">
+								<label class="control-label">Data da expedição do documento CNH</label>
+								<input type="text" id="dtExpedCnh" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
 							</div>
 						</div>
 
@@ -399,11 +404,11 @@
 				<footer class="row">
 					<div class="col-sm-4">
 						<section class="wizard">
-							<button type="button"  class="btn btn-inverse previous"><i class="fa fa-angle-left"></i> Previous</button>
-							<button type="button"  class="btn btn-theme next">Next <i class="fa fa-angle-right"></i></button>
+							<button type="button"  class="btn btn-inverse previous"><i class="fa fa-angle-left"></i> Anterior</button>
+							<button type="button"  class="btn btn-theme next">Próximo<i class="fa fa-angle-right"></i></button>
 						</section>
 					</div>
-					<div class="col-sm-8 align-lg-right"><div class="wizard-status">Formulário : <span></span></div></div>
+					<div class="col-sm-8 align-lg-right"><div class="wizard-status">Etapa <span></span></div></div>
 				</footer>
 			</div>
 		</form>
@@ -473,7 +478,7 @@ $(document).ready(function() {
 			var $current = index+1;
 			var $percent = ($current/$total) * 100;
 			$('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
-			$('#rootwizard').find('.wizard-status span').html($current+" / "+$total);
+			$('#rootwizard').find('.wizard-status span').html($current+" de "+$total);
 		}
 	});
 
@@ -491,7 +496,7 @@ $(document).ready(function() {
 			$('#step4 h3').find("span").html($('#fullname').val());
 		},
 		onTabClick: function(tab, navigation, index) {
-			$.notific8('Clique em <strong>proximo</strong> para continuar!! ',{ life:5000, theme:"danger" ,heading:" Wizard Tip :); "});
+			$.notific8('Clique no botão <strong>Próximo</strong> no final da página para continuar!',{ life:5000, theme:"danger" ,heading:" Ops! "});
 			return false;
 		},
 		onTabShow: function(tab, navigation, index) {
@@ -504,7 +509,7 @@ $(document).ready(function() {
 			var $current = index+1;
 			var $percent = ($current/$total) * 100;
 			$('#validate-wizard').find('.progress-bar').css({width:$percent+'%'});
-			$('#validate-wizard').find('.wizard-status span').html($current+" / "+$total);
+			$('#validate-wizard').find('.wizard-status span').html($current+" de "+$total);
 		}
 	});
 
