@@ -358,9 +358,7 @@
 																		<label class="control-label">Código do Município de Nascimento</label>
 																		<div class="row">
 																			<div class="col-md-2">
-																				<select name="select" id ="codMunicNascto" class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary" >
-																					<option value="">Nenhum selecionado</option>
-																				</select>
+																				<select id="locality-dropdown" name="locality">
 																				</span>
 																		</div>
 																		</div>
@@ -627,17 +625,25 @@ $(document).ready(function() {
 	});
 
 });
+// drop down com json
+	
+	
+let dropdown = $('#locality-dropdown');
 
-// TESTE COM JSON
-var s = '[{"NAMEVAR":"Some Data 1","CODE":"1"},{"NAMEVAR":"Some Data 2","CODE":"2"}]';
+dropdown.empty();
 
-var jsonData = $.parseJSON(s);
+dropdown.append('<option selected="true" disabled>Choose State/Province</option>');
+dropdown.prop('selectedIndex', 0);
 
-var $select = $('#codMunicNascto');
-$(jsonData).each(function (index, o) {
-    var $option = $("<option/>").attr("value", o.CODE).text(o.NAMEVAR);
-    $select.append($option);
+const url = 'https://api.myjson.com/bins/7xq2x';
+
+// Populate dropdown with list of provinces
+$.getJSON(url, function (data) {
+  $.each(data, function (key, entry) {
+    dropdown.append($('<option></option>').attr('value', entry.abbreviation).text(entry.name));
+  })
 });
+
 </script>
 </body>
 </html>
