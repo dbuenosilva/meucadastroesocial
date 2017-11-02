@@ -1,6 +1,6 @@
-const Aluno = require('./aluno')
+const Funcionario = require('./funcionario')
 
-Aluno.methods(['get','post','put','delete'])
-Aluno.updateOptions({new: true, runValidators: true})
+Funcionario.methods(['get','post','put','delete'])
+Funcionario.updateOptions({new: true, runValidators: false})
 
-module.exports = Aluno
+module.exports = Funcionario

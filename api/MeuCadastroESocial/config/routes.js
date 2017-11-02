@@ -7,7 +7,7 @@ module.exports = function(server) {
   server.use('/api', router)
 
   // rotas da API
-  const alunoService = require('../api/aluno/funcionarioService.js')
-  alunoService.register(router, '/funcionario')
+  const funcionarioService = require('../api/funcionario/funcionarioService.js')
+  funcionarioService.register(router, '/funcionario')
 
 }
