@@ -10,4 +10,7 @@ module.exports = function(server) {
   const funcionarioService = require('../api/funcionario/funcionarioService.js')
   funcionarioService.register(router, '/funcionario')
 
+  //const qualificacaoService = require('../api/funcionario/qualificacaoService.js')
+  //qualificacaoService.register(router, '/qualificacao')
+
 }

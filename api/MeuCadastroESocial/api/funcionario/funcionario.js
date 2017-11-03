@@ -2,6 +2,7 @@ const restful = require('node-restful')
 const mongoose = restful.mongoose
 
 const funcionarioSchema = new mongoose.Schema({
+  id             : { type: String, required: false, tags: 'Matricula do Trabalhador' },
   nmTrab         : { type: String, required: false, tags: 'Nome do Trabalhador' },
   sexo           : { type: String, required: false, tags: 'Sexo' },
   racaCor        : { type: String, required: false, tags: 'Raça e cor' },
@@ -20,3 +21,4 @@ const funcionarioSchema = new mongoose.Schema({
 })
 
 module.exports = restful.model('funcionario', funcionarioSchema)
+module.exports = mongoose.model('Funcionario', funcionarioSchema);
