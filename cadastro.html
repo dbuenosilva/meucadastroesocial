@@ -710,7 +710,7 @@
 
 					<div class="form-group row">
 						<div class="col-md-2">
-							<label class="control-label">URL do perfil no favebook </label>
+							<label class="control-label">URL do perfil no facebook </label>
 							<input type="text" id="urlPerfilFacebook" class="form-control" parsley-type="text" parsley-required="true" placeholder="">
 						</div>
 					</div>
@@ -724,6 +724,121 @@
 				-->
 				<div class="tab-pane fade" id="step4">
 					<h3>Informações do Endereço no Brasil</h3><br>
+
+					<div class="form-group row">
+						<div class="col-md-2">
+							<label class="control-label">Tipo de logradouro</label>
+							<select  class="selectpicker form-control show-menu-arrow show-tick"  id="tpLogradEnd" data-style="btn-primary" >
+
+								<option value="">Quadra</option>
+								<option value="">Condomínio</option>
+								<option value="">Setor</option>
+								<option value="">Avenida</option>
+								<option value="">Rodovia</option>
+								<option value="">Fazenda</option>
+								<option value="">Distrito</option>
+								<option value="">Rua</option>
+								<option value="">Vila</option>
+								<option value="">Alameda</option>
+								<option value="">Campo</option>
+								<option value="">Viela</option>
+								<option value="">Largo</option>
+								<option value="">Vila</option>
+								<option value="">Travessa</option>
+								<option value="">Loteamento</option>
+								<option value="">Pátio</option>
+								<option value="">Viaduto</option>
+								<option value="">Área</option>
+								<option value="">Via</option>
+								<option value="">Aeroporto</option>
+								<option value="">Vereda</option>
+								<option value="">Praça</option>
+								<option value="">Vale</option>
+								<option value="">Trevo</option>
+								<option value="">Morro</option>
+								<option value="">Feira</option>
+								<option value="">Chácara</option>
+								<option value="">Lago</option>
+								<option value="">Jardim</option>
+								<option value="">Recanto</option>
+								<option value="">Ladeira</option>
+								<option value="">Favela</option>
+								<option value="">Esplanada</option>
+								<option value="">Sítio</option>
+								<option value="">Jardim</option>
+								<option value="">Estrada</option>
+								<option value="">Trecho</option>
+								<option value="">Residencial</option>
+								<option value="">Colônia</option>
+								<option value="">Conjunto</option>
+								<option value="">Lagoa</option>
+								<option value="">Passarela</option>
+								<option value="">Estação</option>
+								<option value="">Colônia</option>
+								<option value="">Parque</option>
+
+							</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-md-2">
+						<label class="control-label">Descrição do logradouro </label>
+						<input type="text" id="dscLogradEnd" class="form-control" parsley-type="text" parsley-required="true" placeholder="">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-md-2">
+						<label class="control-label">Número do logradouro </label>
+						<input type="text" id="nrLogradEnd" class="form-control" parsley-type="text" parsley-required="true" placeholder="">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-md-2">
+						<label class="control-label">Número do logradouro </label>
+						<input type="text" id="nrLogradEnd" class="form-control" parsley-type="text" parsley-required="true" placeholder="">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-md-2">
+						<label class="control-label">Complemento </label>
+						<input type="text" id="complementoEnd" class="form-control" parsley-type="text" parsley-required="true" placeholder="">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-md-2">
+						<label class="control-label">Nome do bairro/distrito </label>
+						<input type="text" id="bairroEnd" class="form-control" parsley-type="text" parsley-required="true" placeholder="">
+					</div>
+				</div>
+
+				<!-- Implementar busca pelo codido do municipio e da UF com base no cep informado pelo usuário-->
+				<div class="form-group row">
+					<div class="col-md-2">
+						<label class="control-label">CEP </label>
+						<input type="text" id="cepEnd" class="form-control" parsley-type="text" parsley-required="true" placeholder="">
+					</div>
+				</div>
+
+				<!-- Depende do cep informado -->
+				<div class="form-group row">
+					<div class="col-md-2">
+						<label class="control-label">Código do município </label>
+						<input type="text" id="codMunicEnd" class="form-control" parsley-type="text" parsley-required="true" placeholder="">
+					</div>
+				</div>
+
+				<!-- Depende do cep informado -->
+				<div class="form-group row">
+					<div class="col-md-2">
+						<label class="control-label">Sigla da UF </label>
+						<input type="text" id="ufEnd" class="form-control" parsley-type="text" parsley-required="true" placeholder="">
+					</div>
+				</div>
 
 				</div>
 
