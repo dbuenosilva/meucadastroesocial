@@ -137,6 +137,7 @@
 
 						<div class="tab-pane fade" id="step1" >  <!-- parsley-validate parsley-bind> -->
 								<h3>Dados pessoais</h3><br>
+
 								<div class="form-group row">
 										<div class="col-md-6">
 												<label class="control-label">Nome do trabalhador</label>
@@ -146,239 +147,196 @@
 
 								<div class="form-group">
 										<label class="control-label">Sexo</label>
-										<div>
-												<div class="radio">
+										<ul class="iCheck"  data-color="red">
+												<li>
 														<label>
 																<input type="radio" name="optionsRadios[]" id="sexo" value="m" parsley-required="true" parsley-error-container="div#radio-error">
 																Masculino </label>
-												</div>
-												<div class="radio">
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="optionsRadios[]" id="sexo" value="f" >
 																Feminino </label>
-												</div>
+												</li>
 												<div id="radio-error"></div>
-										</div>
+										</ul>
 								</div>
 
 								<div class="form-group">
 										<label class="control-label">Raça cor</label>
-										<div>
-												<div class="radio">
+										<ul class="iCheck"  data-color="red">
+
+												<li>
 														<label>
 																<input type="radio" name="racaCor" id="racaCor" value="1" parsley-required="true" parsley-error-container="div#radio-error">
 																Amarela de origem japonesa, coreana, etc... </label>
-												</div>
-												<div class="radio">
+												</li>
+												<li>
 														<label>
-																<input type="radio" name="racaCor" id="racaCor" value="2" >
-																Branca </label>
-												</div>
-												<div class="radio">
+																<input type="radio" name="racaCor" id="racaCor" value="2" > Branca </label>
+												</li>
+												<li>
 														<label>
-																<input type="radio" name="racaCor" id="racaCor" value="3" >
-																Indígina </label>
-												</div>
-												<div class="radio">
+																<input type="radio" name="racaCor" id="racaCor" value="3" > Indígina </label>
+												</li>
+												<li>
 														<label>
-																<input type="radio" name="racaCor" id="racaCor" value="4" >
-																Parda </label>
-												</div>
-												<div class="radio">
+																<input type="radio" name="racaCor" id="racaCor" value="4" >	Parda </label>
+												</li>
+												<li>
 														<label>
-																<input type="radio" name="racaCor" id="racaCor" value="5" >
-																Não informada </label>
-												</div>
+																<input type="radio" name="racaCor" id="racaCor" value="5" > Não informada </label>
+												</li>
 												<div id="radio-error"></div>
-										</div>
+
+									</ul>
 								</div>
 
-								<div class="form-group">
+								<div class="form-group row">
+										<div class="col-md-4">
 										<label class="control-label">Estado civil </label>
-										<div>
-												<div class="radio">
+										<ul class="iCheck"  data-color="red">
+												<li>
 														<label>
 																<input type="radio" name="estCiv" id="estCiv" value="1" parsley-required="true" parsley-error-container="div#radio-error">
 																Casado </label>
-												</div>
-												<div class="radio">
+												</li>
+												<li>
 														<label>
-																<input type="radio" name="estCiv" id="estCiv" value="2" >
-																Divorciado </label>
-												</div>
-												<div class="radio">
+																<input type="radio" name="estCiv" id="estCiv" value="2" > Divorciado </label>
+												</li>
+												<li>
 														<label>
-																<input type="radio" name="estCiv" id="estCiv" value="3" >
-																Solteiro </label>
-												</div>
+																<input type="radio" name="estCiv" id="estCiv" value="3" > Solteiro </label>
+												</li>
 
-												<div class="radio">
+												<li>
 														<label>
-																<input type="radio" name="estCiv" id="estCiv" value="4" >
-																Viúvo </label>
-												</div>
-												<div class="radio">
+																<input type="radio" name="estCiv" id="estCiv" value="4" > Viúvo </label>
+												</li>
+												<li>
 														<label>
-																<input type="radio" name="estCiv" id="estCiv" value="5" >
-																União estável </label>
-												</div>
-												<div class="radio">
+																<input type="radio" name="estCiv" id="estCiv" value="5" > União estável </label>
+												</li>
+												<li>
 														<label>
-																<input type="radio" name="estCiv" id="estCiv" value="6" >
-																Outros </label>
-												</div>
+																<input type="radio" name="estCiv" id="estCiv" value="6" > Outros </label>
+												</li>
 												<div id="radio-error"></div>
-										</div>
+										</ul>
+									</div>
 								</div>
 
 								<div class="form-group">
 										<label class="control-label">Grau de instrução do trabalhador</label>
-										<div>
-												<div class="radio">
+										<ul class="iCheck"  data-color="red">
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="01" parsley-required="true" parsley-error-container="div#radio-error">
-																01 – Analfabeto </label>
-												</div>
-												<div class="radio">
+																Analfabeto </label>
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="02" >
-																02 – Até a 4º série incompleta do ensino fundamental (antigo 1º grau ou primário),
+																Até a 4º série incompleta do ensino fundamental (antigo 1º grau ou primário),
 																ou que tenha se alfabetizado sem ter freqüentado escola regular </label>
-												</div>
-												<div class="radio">
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="03" >
-																03 – 4º série completa do ensino fundamental (antigo 1º grau ou ginásio) </label>
-												</div>
+																4º série completa do ensino fundamental (antigo 1º grau ou ginásio) </label>
+												</li>
 
-												<div class="radio">
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="04" >
-																 04 – Da 5º a 8º série do ensino fundamental (antigo 1º grau ou ginásio) </label>
-												</div>
-												<div class="radio">
+																 Da 5º a 8º série do ensino fundamental (antigo 1º grau ou ginásio) </label>
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="05" >
-																 05 – Ensino fundamental completo (antigo 1º grau, primário ou ginásio) </label>
-												</div>
-												<div class="radio">
+																 Ensino fundamental completo (antigo 1º grau, primário ou ginásio) </label>
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="06" >
-																06 – Ensino médio incompleto (antigo 2º grau, secundário ou colegial) </label>
-												</div>
-												<div class="radio">
+																Ensino médio incompleto (antigo 2º grau, secundário ou colegial) </label>
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="07" >
-																07 – Ensino médico completo (antigo 2º grau, secundário ou colegial) </label>
-												</div>
-												<div class="radio">
+																Ensino médico completo (antigo 2º grau, secundário ou colegial) </label>
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="08" >
-																08 – Educação Superior incompleta </label>
-												</div>
-												<div class="radio">
+																Educação Superior incompleta </label>
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="09" >
-																09 – Educação Superior completa </label>
-												</div>
-												<div class="radio">
+																Educação Superior completa </label>
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="10" >
-																10 – Pós Graduação </label>
-												</div>
-												<div class="radio">
+																Pós Graduação </label>
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="11" >
-																11 – Mestrado </label>
-												</div>
-												<div class="radio">
+																Mestrado </label>
+												</li>
+												<li>
 														<label>
 																<input type="radio" name="grauInstr" id="grauInstr" value="12" >
-																12 – Doutorado </label>
-												</div>
+																Doutorado </label>
+												</li>
 												<div id="radio-error"></div>
-										</div>
+										</ul>
 								</div>
 
 								<div class="form-group row">
 										<div class="col-md-6">
-												<label class="control-label">Nome Social</label>
-															<input type="text" maxlength=70 class="form-control" id="nmSoc" parsley-required="true" placeholder="informe seu nome completo">
+											<label class="control-label">Nome Social</label>
+											<input type="text" maxlength=70 class="form-control" id="nmSoc" parsley-required="true" placeholder="informe seu nome completo">
 										</div>
 								</div>
 
 								<div class="form-group">
-										<label class="control-label">Data de nascimento</label>
+									<label class="control-label">Data de nascimento</label>
+									<div>
 										<div class="row">
-												<div class="col-md-6"><input type="text" class="form-control" id="dtNascto" parsley-type="dateIso" parsley-required="true" placeholder="DD-MM-AAAA"></div>
+											<div class="input-group date form_datetime col-md-2" data-picker-position="bottom-left"  data-date-format="dd MM yyyy" >
+												<input id= "dtNascto" type="text" class="form-control">
+												<span class="input-group-btn">
+												<button class="btn btn-default" type="button"><i class="fa fa-times"></i></button>
+												<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+											</div>
 										</div>
+									</div>
 								</div>
 
+								<!-- ESSE TRECHO USA JSON PARA PREENCHER O MENU DROPDOWN -->
 								<div class="form-group">
 									<label class="control-label">Sigla da UF de Nascimento</label>
 									<div class="row">
-									<div class="col-md-2">
-											<select  id="codMunicNascto" class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary" >
-												<option value="AC">AC</option>
-												<option value="AL">AL</option>
-												<option value="AP">AP</option>
-												<option value="AM">AM</option>
-												<option value="BA">BA</option>
-												<option value="CE">CE</option>
-												<option value="DF">DF</option>
-												<option value="ES">ES</option>
-												<option value="GO">GO</option>
-												<option value="MA">MA</option>
-												<option value="MT">MT</option>
-												<option value="MS">MS</option>
-												<option value="MG">MG</option>
-												<option value="PA">PA</option>
-												<option value="PB">PB</option>
-												<option value="PR">PR</option>
-												<option value="PE">PE</option>
-												<option value="PI">PI</option>
-												<option value="RJ">RJ</option>
-												<option value="RN">RN</option>
-												<option value="RS">RS</option>
-												<option value="RO">RO</option>
-												<option value="RR">RR</option>
-												<option value="SC">SC</option>
-												<option value="SP">SP</option>
-												<option value="SE">SE</option>
-												<option value="TO">TO</option>
-											</select>
-										</span>
+										<div class="col-md-2">
+											<select  id="codMunicNascto"  > </select>
+											</span>
+										</div>
 									</div>
-								</div>
 								</div>
 
 								<div class="form-group">
 									<div class="row">
-									<div class="col-md-2">
-										<label class="control-label">País de Nascimento</label>
-										<select  id ="paisNascto" class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary" >
-										<option value="Brasil">Brasil</option>
-										<option value="Argentina">Argentina</option>
-										<option value="Estados Unidos">Estados Unidos</option>
-										<option value="Inglaterra">Inglaterra</option>
-										<option value="Uruguai">Uruguai</option>
-										<option value="Colômbia">Colômbia</option>
-										</select>
+										<div class="col-md-2">
+											<label class="control-label">País de Nascimento</label>
+											<select  id ="paisNascto" > </select>
+										</div>
+									</div>
 								</div>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label class="control-label">Sigla da UF de Nascimento JSON</label>
-								<div class="row">
-								<div class="col-md-2">
-
-									<select id="locality-dropdown" name="locality" >
-
-									</select>
-							</div>
-							</div>
-						</div>
 
 								<div class="form-group row">
 										<div class="col-md-6">
@@ -418,10 +376,18 @@
 								</div>
 							</div>
 
-							<div class="form-group row">
-								<div class="col-md-2">
-									<label class="control-label">Data da expedição do documento de identidade</label>
-									<input type="text" id="dtExpedRg" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
+							<div class="form-group">
+								<label class="control-label">Data da expedição do documento de identidade</label>
+								<div>
+									<div class="row">
+										<div class="input-group date form_datetime col-md-2" data-picker-position="bottom-left"  data-date-format="dd MM yyyy" >
+											<input type="text" class="form-control" id="dtExpedRg">
+											<span class="input-group-btn">
+											<button class="btn btn-default" type="button"><i class="fa fa-times"></i></button>
+											<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+											</span>
+										</div>
+									</div>
 								</div>
 							</div>
 
@@ -449,34 +415,8 @@
 							<div class="form-group row">
 								<div class="col-md-2">
 									<label class="control-label">UF da expedição da CPTS</label>
-									<select  class="selectpicker form-control show-menu-arrow show-tick"  id="ufCtps" data-style="btn-primary" >
-										<option value="AC">AC</option>
-										<option value="AL">AL</option>
-										<option value="AP">AP</option>
-										<option value="AM">AM</option>
-										<option value="BA">BA</option>
-										<option value="CE">CE</option>
-										<option value="DF">DF</option>
-										<option value="ES">ES</option>
-										<option value="GO">GO</option>
-										<option value="MA">MA</option>
-										<option value="MT">MT</option>
-										<option value="MS">MS</option>
-										<option value="MG">MG</option>
-										<option value="PA">PA</option>
-										<option value="PB">PB</option>
-										<option value="PR">PR</option>
-										<option value="PE">PE</option>
-										<option value="PI">PI</option>
-										<option value="RJ">RJ</option>
-										<option value="RN">RN</option>
-										<option value="RS">RS</option>
-										<option value="RO">RO</option>
-										<option value="RR">RR</option>
-										<option value="SC">SC</option>
-										<option value="SP">SP</option>
-										<option value="SE">SE</option>
-										<option value="TO">TO</option>
+									<select id="ufCtps" data-style="btn-primary" >
+
 									</select>
 								</span>
 							</div>
@@ -496,64 +436,58 @@
 							</div>
 						</div>
 
-						<div class="form-group row">
-							<div class="col-md-2">
-								<label class="control-label">Data da expedição do documento CNH</label>
-								<input type="text" id="dtExpedCnh" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
+						<div class="form-group">
+							<label class="control-label">Data da expedição do documento CNH</label>
+							<div>
+								<div class="row">
+									<div class="input-group date form_datetime col-md-2" data-picker-position="bottom-left"  data-date-format="dd MM yyyy" >
+										<input type="text" class="form-control" id="dtExpedCnh" parsley-type="dateIso" parsley-required="true">
+										<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><i class="fa fa-times"></i></button>
+										<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
 
-						<div class="form-group row">
-							<div class="col-md-2">
-								<label class="control-label">Data de validade do documento</label>
-								<input type="text" id="dtValidCnh" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
+						<div class="form-group">
+							<label class="control-label">Data de validade do documento CNH</label>
+							<div>
+								<div class="row">
+									<div class="input-group date form_datetime col-md-2" data-picker-position="bottom-left"  data-date-format="dd MM yyyy" >
+										<input type="text" class="form-control" id="dtValidCnh" parsley-type="dateIso" parsley-required="true">
+										<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><i class="fa fa-times"></i></button>
+										<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
 
-						<div class="form-group row">
-							<div class="col-md-2">
-								<label class="control-label">Data da primeira habilitação</label>
-								<input type="text" id="dtPriHab" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
+						<div class="form-group">
+							<label class="control-label">Data da primeira habilitação</label>
+							<div>
+								<div class="row">
+									<div class="input-group date form_datetime col-md-2" data-picker-position="bottom-left"  data-date-format="dd MM yyyy" >
+										<input type="text" class="form-control" id="dtPriHab" parsley-type="dateIso" parsley-required="true">
+										<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><i class="fa fa-times"></i></button>
+										<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
 
 						<div class="form-group row">
 							<div class="col-md-2">
 								<label class="control-label">UF emissor CNH</label>
-								<select  class="selectpicker form-control show-menu-arrow show-tick"  id="ufCnh" data-style="btn-primary" >
-									<option value="AC">AC</option>
-									<option value="AL">AL</option>
-									<option value="AP">AP</option>
-									<option value="AM">AM</option>
-									<option value="BA">BA</option>
-									<option value="CE">CE</option>
-									<option value="DF">DF</option>
-									<option value="ES">ES</option>
-									<option value="GO">GO</option>
-									<option value="MA">MA</option>
-									<option value="MT">MT</option>
-									<option value="MS">MS</option>
-									<option value="MG">MG</option>
-									<option value="PA">PA</option>
-									<option value="PB">PB</option>
-									<option value="PR">PR</option>
-									<option value="PE">PE</option>
-									<option value="PI">PI</option>
-									<option value="RJ">RJ</option>
-									<option value="RN">RN</option>
-									<option value="RS">RS</option>
-									<option value="RO">RO</option>
-									<option value="RR">RR</option>
-									<option value="SC">SC</option>
-									<option value="SP">SP</option>
-									<option value="SE">SE</option>
-									<option value="TO">TO</option>
-								</select>
+								<select    id="ufCnh" data-style="btn-primary" > </select>
 							</span>
 						</div>
 					</div>
-
-
 
 					<div class="form-group row">
 						<div class="col-md-4">
@@ -615,10 +549,18 @@
 						</div>
 					</div>
 
-					<div class="form-group row">
-						<div class="col-md-2">
-							<label class="control-label">Data da expedição do documento DIC</label>
-							<input type="text" id="dtExpedRic" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
+					<div class="form-group">
+						<label class="control-label">Data da expedição do documento DIC</label>
+						<div>
+							<div class="row">
+								<div class="input-group date form_datetime col-md-2" data-picker-position="bottom-left"  data-date-format="dd MM yyyy" >
+									<input type="text" class="form-control" id="dtExpedRic" parsley-type="dateIso" parsley-required="true">
+									<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><i class="fa fa-times"></i></button>
+									<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -638,13 +580,6 @@
 
 					<div class="form-group row">
 						<div class="col-md-2">
-							<label class="control-label">Data da expedição do documento DIC</label>
-							<input type="text" id="dtExpedRne" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
-						</div>
-					</div>
-
-					<div class="form-group row">
-						<div class="col-md-2">
 							<label class="control-label">Inscrição no órgão de classe</label>
 							<input type="text" id="nrOc" class="form-control" parsley-type="number" parsley-required="true" placeholder="">
 						</div>
@@ -657,17 +592,33 @@
 						</div>
 					</div>
 
-					<div class="form-group row">
-						<div class="col-md-2">
-							<label class="control-label">Data da expedição do documento do órgão de classe</label>
-							<input type="text" id="dtExpedOc" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
+					<div class="form-group">
+						<label class="control-label">Data da expedição do documento do órgão de classe</label>
+						<div>
+							<div class="row">
+								<div class="input-group date form_datetime col-md-2" data-picker-position="bottom-left"  data-date-format="dd MM yyyy" >
+									<input type="text" class="form-control" id="dtExpedOc" parsley-type="dateIso" parsley-required="true">
+									<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><i class="fa fa-times"></i></button>
+									<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<div class="form-group row">
-						<div class="col-md-2">
-							<label class="control-label">Data de validade do documento do órgão de classe</label>
-							<input type="text" id="dtValidOc" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
+					<div class="form-group">
+						<label class="control-label">Data de validade do documento do órgão de classe</label>
+						<div>
+							<div class="row">
+								<div class="input-group date form_datetime col-md-2" data-picker-position="bottom-left"  data-date-format="dd MM yyyy" >
+									<input type="text" class="form-control" id="dtValidOc" parsley-type="dateIso" parsley-required="true">
+									<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><i class="fa fa-times"></i></button>
+									<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -730,7 +681,6 @@
 						<div class="col-md-2">
 							<label class="control-label">Tipo de logradouro</label>
 							<select  class="selectpicker form-control show-menu-arrow show-tick"  id="tpLogradEnd" data-style="btn-primary" >
-
 								<option value="">Quadra</option>
 								<option value="">Condomínio</option>
 								<option value="">Setor</option>
@@ -851,13 +801,13 @@
 				<div class="tab-pane fade" id="step5">
 					<h3>Informações do Endereço no Exterior</h3><br>
 
-									<!-- O valor recebido é o código do país escolhido-->
-									<div class="form-group">
-										<label class="control-label">País</label>
-										<div class="row">
+								<!-- O valor recebido é o código do país escolhido-->
+								<div class="form-group">
+									<div class="row">
 										<div class="col-md-2">
-											<select id="paisResid"  > </select>
-									</div>
+											<label class="control-label">País</label>
+											<select  id ="paisResid" > </select>
+										</div>
 									</div>
 								</div>
 
@@ -914,10 +864,18 @@
 				<div class="tab-pane fade" id="step6">
 					<h3>Grupo de informações do Trabalhador Estrangeiro</h3><br>
 
-					<div class="form-group row">
-						<div class="col-md-2">
-							<label class="control-label">Data de chegada ao Brasil</label>
-							<input type="text" id="dtChegada" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
+					<div class="form-group">
+						<label class="control-label">Data de chegada ao Brasil</label>
+						<div>
+							<div class="row">
+								<div class="input-group date form_datetime col-md-2" data-picker-position="bottom-left"  data-date-format="dd MM yyyy" >
+									<input type="text" class="form-control" id="dtChegada" parsley-type="dateIso" parsley-required="true">
+									<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><i class="fa fa-times"></i></button>
+									<button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -1159,7 +1117,7 @@
 					</div>
 
 					<div class="form-group row">
-						<div class="col-md-2">
+						<div class="col-md-6">
 							<label class="control-label">Observação</label>
 								<div>
 									<textarea id="observacao" class="form-control" rows="3"></textarea>
@@ -1282,39 +1240,56 @@ $(document).ready(function() {
 
 });
 
-// Json com estados
-//const url = 'assets/json/estados';
+
+// DROPDOWN COM ESTADOS DO BRASIL
 const url = 'https://api.myjson.com/bins/15sfur';
 
-// drop down com json de Estados do Brasil
-let dropdown = $('#locality-dropdown');
+let dropdown = $('#codMunicNascto');
+let dropdownUfCtps = $('#ufCtps');
+let dropdownUfCnh = $('#ufCnh');
 
 dropdown.empty();
 dropdown.append('<option selected="true" disabled>Escolha UF</option>');
 dropdown.prop('selectedIndex', 0);
 
+dropdownUfCtps.empty();
+dropdownUfCtps.append('<option selected="true" disabled>Escolha UF</option>');
+dropdownUfCtps.prop('selectedIndex', 0);
+
+dropdownUfCnh.empty();
+dropdownUfCnh.append('<option selected="true" disabled>Escolha UF</option>');
+dropdownUfCnh.prop('selectedIndex', 0);
+
 // Preenche dropdown com a lista de estados
 $.getJSON(url, function (data) {
   $.each(data, function (key, entry) {
     dropdown.append($('<option></option>').attr('value', entry.sigla).text(entry.nome));
+		dropdownUfCtps.append($('<option></option>').attr('value', entry.sigla).text(entry.nome));
+		dropdownUfCnh.append($('<option></option>').attr('value', entry.sigla).text(entry.nome));
   })
 });
 
 
 // PAISES COM DROPDOWN
-const urlpaises = 'https://api.myjson.com/bins/eko8z';
+const urlpaises = 'https://api.myjson.com/bins/hi5e7';
 
-// drop down com json de Estados do Brasil
-let dropdownPaises = $('#paisResid');
+// drop down com json paises
+let dropdownPaisNascto= $('#paisNascto');
+let dropdownPaisResid = $('#paisResid');
 
-dropdownPaises.empty();
-dropdownPaises.append('<option selected="true" disabled>Escolha o país</option>');
-dropdownPaises.prop('selectedIndex', 0);
+dropdownPaisNascto.empty();
+dropdownPaisNascto.append('<option selected="true" disabled>Escolha o país</option>');
+dropdownPaisNascto.prop('selectedIndex', 2);
+
+dropdownPaisResid.empty();
+dropdownPaisResid.append('<option selected="true" disabled>Escolha o país</option>');
+dropdownPaisResid.prop('selectedIndex', 2);
 
 // Preenche dropdown com a lista de estados
 $.getJSON(urlpaises, function (data) {
   $.each(data, function (key, entry) {
-    dropdownPaises.append($('<option></option>').attr('value', entry.cod).text(entry.pais));
+    dropdownPaisNascto.append($('<option></option>').attr('value', entry.codigo).text(entry.nome));
+		dropdownPaisResid.append($('<option></option>').attr('value', entry.codigo).text(entry.nome));
   })
 });
 
