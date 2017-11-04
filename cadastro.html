@@ -24,6 +24,7 @@
 	<link type="text/css" rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="assets/css/bootstrap/bootstrap-themes.css" />
 	<link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+	<link type="text/css" rel="stylesheet" href="assets/css/style.css" />
 
 	<!-- Styleswitch if  you don't chang theme , you can delete -->
 	<link type="text/css" rel="alternate stylesheet" media="screen" title="style1" href="assets/css/styleTheme1.css" />
@@ -850,6 +851,59 @@
 				<div class="tab-pane fade" id="step5">
 					<h3>Informações do Endereço no Exterior</h3><br>
 
+									<!-- O valor recebido é o código do país escolhido-->
+									<div class="form-group">
+										<label class="control-label">País</label>
+										<div class="row">
+										<div class="col-md-2">
+											<select id="paisResid"  > </select>
+									</div>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-md-2">
+										<label class="control-label">Descrição do logradouro no exterior	 </label>
+										<input type="text" id="dscLogradEx" class="form-control" parsley-type="text" parsley-required="false" placeholder="">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-md-2">
+										<label class="control-label">Número do logradouro no exterior	 </label>
+										<input type="text" id="nrLogradEx" class="form-control" parsley-type="text" parsley-required="false" placeholder="">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-md-2">
+										<label class="control-label">Complemento no exterior	 </label>
+										<input type="text" id="complementoEx" class="form-control" parsley-type="text" parsley-required="false" placeholder="">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-md-2">
+										<label class="control-label">Bairro no exterior	 </label>
+										<input type="text" id="bairroEx" class="form-control" parsley-type="text" parsley-required="false" placeholder="">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-md-2">
+										<label class="control-label">Código postal	 </label>
+										<input type="text" id="codPostalEx" class="form-control" parsley-type="text" parsley-required="false" placeholder="">
+									</div>
+								</div>
+
+								<!-- Possivel implementação com carregamento das cidades quando o usuário escolher o país -->
+								<div class="form-group row">
+									<div class="col-md-2">
+										<label class="control-label">Nome da cidade no exterior	 </label>
+										<input type="text" id="nmCidEx" class="form-control" parsley-type="text" parsley-required="false" placeholder="">
+									</div>
+								</div>
+
 				</div>
 
 				<!--
@@ -859,6 +913,61 @@
 				-->
 				<div class="tab-pane fade" id="step6">
 					<h3>Grupo de informações do Trabalhador Estrangeiro</h3><br>
+
+					<div class="form-group row">
+						<div class="col-md-2">
+							<label class="control-label">Data de chegada ao Brasil</label>
+							<input type="text" id="dtChegada" class="form-control" parsley-type="dateIso" parsley-required="true" placeholder="DD/MM/AAAA">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Classificação da condição do estrangeiro</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="classTrabEstrang" value="A"  name="documento-radio">
+									<label>Casado</label>
+								</li>
+								<li>
+									<input type="radio" id="classTrabEstrang" value="B"  name="documento-radio">
+									<label>Solteiro</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Casado com brasileiro</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="casadoBr" value="S"  name="documento-radio">
+									<label>Sim</label>
+								</li>
+								<li>
+									<input type="radio" id="casadoBr" value="N"  name="documento-radio">
+									<label>Não</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Tem filhos brasileiros</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="filhosBr" value="S"  name="documento-radio">
+									<label>Sim</label>
+								</li>
+								<li>
+									<input type="radio" id="filhosBr" value="N"  name="documento-radio">
+									<label>Não</label>
+								</li>
+							</ul>
+						</div>
+					</div>
 
 				</div>
 
@@ -870,6 +979,61 @@
 				<div class="tab-pane fade" id="step7">
 					<h3>Informações referente a Dependentes</h3><br>
 
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Tipo de dependente</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="tpDep" value="01"  name="documento-radio">
+									<label> Cônjuge ou companheiro (a) com o (a) qual tenha filho ou viva a mais de 5 (cinco) anos</label>
+								</li>
+								<li>
+									<input type="radio" id="tpDep" value="02"  name="documento-radio">
+									<label>Filho (a) ou enteado (a) até 21 (vinte e um) anos</label>
+								</li>
+								<li>
+									<input type="radio" id="tpDep" value="03"  name="documento-radio">
+									<label> Filho (a) ou enteado (a) universitário (a) ou cursando escola técnica de 2º grau, até 24 (vinte e quatro) anos</label>
+								</li>
+								<li>
+									<input type="radio" id="tpDep" value="04"  name="documento-radio">
+									<label>  Filho (a) ou enteado (a) em qualquer idade, quando incapacitado física e/ou mentalmente para o trabalho</label>
+								</li>
+								<li>
+									<input type="radio" id="tpDep" value="05"  name="documento-radio">
+									<label>   Irmão (a), neto (a) ou bisneto (a) sem arrimo dos pais, do (a) qual detenha a guarda judicial, até 21 (vinte um) anos</label>
+								</li>
+								<li>
+									<input type="radio" id="tpDep" value="06"  name="documento-radio">
+									<label>    Irmão (a), neto (a) ou bisneto (a) sem arrimo dos pais, com idade até 24 anos,
+										se  ainda estiver cursando estabelecimento de nível superior ou escola técnica de 2º grau,
+										desde que tenha detido sua guarda judicial até os 21 anos</label>
+								</li>
+								<li>
+									<input type="radio" id="tpDep" value="07"  name="documento-radio">
+									<label>Irmão (a), neto (a) ou bisneto (a) sem arrimo dos pais, do (a) qual detenha a
+										guarda judicial, em qualquer idade, quando incapacitado física e/ou mentalmente para o
+										trabalho</label>
+								</li>
+
+								<li>
+									<input type="radio" id="tpDep" value="08"  name="documento-radio">
+									<label>Pais,avós e bisavós</label>
+								</li>
+								<li>
+									<input type="radio" id="tpDep" value="09"  name="documento-radio">
+									<label> Menor pobre, até 21 (vinte e um anos), que crie e eduque e do qual detenha a guarda judicia</label>
+								</li>
+								<li>
+									<input type="radio" id="tpDep" value="09"  name="documento-radio">
+									<label> A pessoa absolutamente incapaz, da qual seja tutor ou curador</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- FAZER LISTA DE DEPENDENTES, PODE INSERIR QUANTOS DEPENDENTES QUISER-->
+
 				</div>
 
 				<!--
@@ -877,8 +1041,133 @@
 				//////////     INFORMAÇÕES REFERENTE A DEFICIÊNCIA FÍSICA //////////
 				////////////////////////////////////////////////////////////////////
 				-->
+
+
 				<div class="tab-pane fade" id="step8">
-					<h3>Informações referente a Deficiência Física</h3><br>
+					<h3>Informações referente a deficiência física</h3><br>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Deficiência física</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="defFisica" value="S"  name="documento-radio">
+									<label>Sim</label>
+								</li>
+								<li>
+									<input type="radio" id="defFisica" value="N"  name="documento-radio">
+									<label>Não</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Deficiência visual</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="defVisual" value="S"  name="documento-radio">
+									<label>Sim</label>
+								</li>
+								<li>
+									<input type="radio" id="defVisual" value="N"  name="documento-radio">
+									<label>Não</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Deficiência auditiva</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="defAuditiva" value="S"  name="documento-radio">
+									<label>Sim</label>
+								</li>
+								<li>
+									<input type="radio" id="defAuditiva" value="N"  name="documento-radio">
+									<label>Não</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Deficiência mental</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="defMental" value="S"  name="documento-radio">
+									<label>Sim</label>
+								</li>
+								<li>
+									<input type="radio" id="defMental" value="N"  name="documento-radio">
+									<label>Não</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Deficiência intelectual</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="defIntelectual" value="S"  name="documento-radio">
+									<label>Sim</label>
+								</li>
+								<li>
+									<input type="radio" id="defIntelectual" value="N"  name="documento-radio">
+									<label>Não</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Reabilitado?</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="reabReadap" value="S"  name="documento-radio">
+									<label>Sim</label>
+								</li>
+								<li>
+									<input type="radio" id="reabReadap" value="N"  name="documento-radio">
+									<label>Não</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label class="control-label">Informar se o trabalhador preenche cota PCD</label>
+							<ul class="iCheck"  data-color="red">
+								<li>
+									<input type="radio" id="infoCota" value="S"  name="documento-radio">
+									<label>Sim</label>
+								</li>
+								<li>
+									<input type="radio" id="infoCota" value="N"  name="documento-radio">
+									<label>Não</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-2">
+							<label class="control-label">Observação</label>
+								<div>
+									<textarea id="observacao" class="form-control" rows="3"></textarea>
+								</div>
+						</div>
+					</div>
+				</div>
+
 
 				</div>
 
@@ -993,17 +1282,16 @@ $(document).ready(function() {
 
 });
 
+// Json com estados
+//const url = 'assets/json/estados';
+const url = 'https://api.myjson.com/bins/15sfur';
+
 // drop down com json de Estados do Brasil
 let dropdown = $('#locality-dropdown');
 
 dropdown.empty();
-
 dropdown.append('<option selected="true" disabled>Escolha UF</option>');
 dropdown.prop('selectedIndex', 0);
-
-// Json com estados
-//const url = 'assets/json/estados';
-const url = 'https://api.myjson.com/bins/15sfur';
 
 // Preenche dropdown com a lista de estados
 $.getJSON(url, function (data) {
@@ -1011,6 +1299,25 @@ $.getJSON(url, function (data) {
     dropdown.append($('<option></option>').attr('value', entry.sigla).text(entry.nome));
   })
 });
+
+
+// PAISES COM DROPDOWN
+const urlpaises = 'https://api.myjson.com/bins/eko8z';
+
+// drop down com json de Estados do Brasil
+let dropdownPaises = $('#paisResid');
+
+dropdownPaises.empty();
+dropdownPaises.append('<option selected="true" disabled>Escolha o país</option>');
+dropdownPaises.prop('selectedIndex', 0);
+
+// Preenche dropdown com a lista de estados
+$.getJSON(urlpaises, function (data) {
+  $.each(data, function (key, entry) {
+    dropdownPaises.append($('<option></option>').attr('value', entry.cod).text(entry.pais));
+  })
+});
+
 </script>
 </body>
 </html>
