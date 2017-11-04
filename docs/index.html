@@ -317,36 +317,8 @@
 									<label class="control-label">Sigla da UF de Nascimento</label>
 									<div class="row">
 									<div class="col-md-2">
-											<select  id="codMunicNascto" class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary" >
-												<option value="AC">AC</option>
-												<option value="AL">AL</option>
-												<option value="AP">AP</option>
-												<option value="AM">AM</option>
-												<option value="BA">BA</option>
-												<option value="CE">CE</option>
-												<option value="DF">DF</option>
-												<option value="ES">ES</option>
-												<option value="GO">GO</option>
-												<option value="MA">MA</option>
-												<option value="MT">MT</option>
-												<option value="MS">MS</option>
-												<option value="MG">MG</option>
-												<option value="PA">PA</option>
-												<option value="PB">PB</option>
-												<option value="PR">PR</option>
-												<option value="PE">PE</option>
-												<option value="PI">PI</option>
-												<option value="RJ">RJ</option>
-												<option value="RN">RN</option>
-												<option value="RS">RS</option>
-												<option value="RO">RO</option>
-												<option value="RR">RR</option>
-												<option value="SC">SC</option>
-												<option value="SP">SP</option>
-												<option value="SE">SE</option>
-												<option value="TO">TO</option>
-											</select>
-										</span>
+										<select name="estados" id="codMunicNascto" class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary">
+										</select>
 									</div>
 								</div>
 								</div>
@@ -356,12 +328,6 @@
 									<div class="col-md-2">
 										<label class="control-label">País de Nascimento</label>
 										<select  id ="paisNascto" class="selectpicker form-control show-menu-arrow show-tick"  data-style="btn-primary" >
-										<option value="Brasil">Brasil</option>
-										<option value="Argentina">Argentina</option>
-										<option value="Estados Unidos">Estados Unidos</option>
-										<option value="Inglaterra">Inglaterra</option>
-										<option value="Uruguai">Uruguai</option>
-										<option value="Colômbia">Colômbia</option>
 										</select>
 								</div>
 								</div>
@@ -992,6 +958,33 @@ $(document).ready(function() {
 	});
 
 });
+
+// Obtem os paises no arquivo json
+function paisNascto(chave) {
+    var elemento = document.getElementById(chave);
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+            var tamanho = json.length;
+            var i;
+
+            /* insere países */
+            for (i = 0; i < tamanho; i++) {
+                var opcao = document.createElement('option');
+                var componente = json[i];
+                opcao.text = componente.pais;
+                opcao.value = componente.cod;
+                elemento.add(opcao, elemento[i]);
+            }
+        }
+    };
+    xhttp.open("GET", "js/paises.json", true);
+    xhttp.send();
+}
+
+
 
 // drop down com json de Estados do Brasil
 let dropdown = $('#locality-dropdown');
