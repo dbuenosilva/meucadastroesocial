@@ -1,6 +1,5 @@
 
 
-
 window.onload = function () {
    
     paises('paisNascto');
@@ -82,24 +81,3 @@ function paises(chave) {
     xhttp.open("GET", "assets/json/paises.json", true);
     xhttp.send();
 }
-
-
-
-// drop down com json de Estados do Brasil
-let dropdown = $('#locality-dropdown');
-
-dropdown.empty();
-
-dropdown.append('<option selected="true" disabled>Escolha UF</option>');
-dropdown.prop('selectedIndex', 0);
-
-// Json com estados
-//const url = 'assets/json/estados';
-const url = 'https://api.myjson.com/bins/15sfur';
-
-// Preenche dropdown com a lista de estados
-$.getJSON(url, function (data) {
-  $.each(data, function (key, entry) {
-    dropdown.append($('<option></option>').attr('value', entry.sigla).text(entry.nome));
-  })
-});
