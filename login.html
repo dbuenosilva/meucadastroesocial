@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <div id='div-must-auth' class="login-form col-xs-10 offset-xs-1 col-sm-6 offset-sm-3 col-md-4 offset-md-4">
+        <header>
+            <h1><img src="img/esocial-logo.png" class="img-fluid"> </h1>
+            <h2 class="text-center">Entre com seu <b>usuário</b> e <b>senha</b></h2>
+        </header>
+        <form>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><span class="fas fa-user"></span></span>
+                </div>
+                <input type="email" id="txtEmail" class="form-control" placeholder="Email" aria-label="Usuario" aria-describedby="basic-addon1" required autofocus>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><span class="fas fa-key"></span></span>
+                </div>
+                <input type="password" id="txtSenha" class="form-control" placeholder="Senha" aria-label="Senha" aria-describedby="basic-addon1" required>
+            </div>
+
+            <footer>
+                <!--
+                <div class="checkbox text-left">
+                    <label><input type="checkbox" name="lembrar">Lembrar de mim  </label>
+                </div>
+                -->
+                <div class=text-none>
+                    <button type="submit" id="btnSignUp" class="btn btn-primary ">Cadastrar</button>
+                    <button type="submit" id="btnLogin" class="btn btn-primary ">Entrar</button>
+                    <button type="submit" id="btnLogout" class="btn btn-action d-none">Sair</button>
+                </div>
+
+                <a href="#" class="forgot-password">
+                        Esqueceu a senha?
+                </a>
+                <p class="mt-5 mb-3 text-muted>">©2018</p>
+            </footer>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src=" js/jquery-3.3.1.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
