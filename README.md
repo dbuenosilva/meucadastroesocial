@@ -1,12 +1,17 @@
 # Meu Cadastro eSocial
-Projeto Fundamentos de Front End
+
+Projeto Final de Curso
+
+ESPECIALIZAÇÃO EM DESENVOLVIMENTO WEB E MOBILE – FULL STACK – 2017/2018
+
+INSTITUTO DE INFORMÁTICA
+UNIVERSIDADE FEDERAL DE GOIÁS
+PRÓ-REITORIA DE PÓS-GRADUAÇÃO REGIONAL GOIÂNIA
 
 
-Integrantes do Grupo
-
+Alunos:
  - Allan Costa Avelar
- - Diego Bueno da Silva
- - Fernanda Stefani Souza Malaquias
+ - Diego Bueno da Silva - Matrícula: 0542.2017 - diego@bueno.eti.br
 
 URL para acesso público:
 https://dbuenosilva.github.io/meucadastroesocial/
@@ -14,7 +19,7 @@ https://dbuenosilva.github.io/meucadastroesocial/
 
 
 
-# Escopo do Projeto: 
+# Escopo do Projeto:
 
 Será desenvolvido um portal Web e app mobile nas plataformas Android e iOS visando a atualização cadastral dos colaborares de uma organização para entrega do e-Social;
 
